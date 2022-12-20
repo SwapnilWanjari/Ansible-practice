@@ -1,0 +1,15 @@
+--- # user loop
+
+- hosts: devlinux
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+    - name: create users
+      user: name="{{item}}" state=present
+      loop:
+        - "swapnil"
+        - "rocky"
+        - "vicky"

@@ -1,0 +1,8 @@
+--- # my 1st ansible playbook
+
+- hosts: devlinux[0], qalinux[0]
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+

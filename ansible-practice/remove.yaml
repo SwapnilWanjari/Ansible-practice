@@ -1,0 +1,11 @@
+--- # tasks
+
+- hosts: devlinux
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  tasks:
+    - name: remove httpd
+      action: yum pkg=httpd state=absent
